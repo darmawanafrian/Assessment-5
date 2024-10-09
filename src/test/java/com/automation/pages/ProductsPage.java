@@ -98,6 +98,18 @@ public class ProductsPage {
         return new CartPage(driver);
     }
 
+    public CartPage addThoseProductsToCart() {
+        SeleniumHelper.waitForElementToBeClickable(driver, addToCartButton1);
+        addToCartButton1.click();
+        SeleniumHelper.waitForElementToBeClickable(driver, continueShoppingButton);
+        continueShoppingButton.click();
+        SeleniumHelper.waitForElementToBeClickable(driver, addToCartButton2);
+        addToCartButton2.click();
+        SeleniumHelper.waitForElementToBeClickable(driver, viewCartButton);
+        viewCartButton.click();
+        return new CartPage(driver);
+    }
+
     public ProductsPage menCategoryClick() {
         menCategory.click();
         return this;
